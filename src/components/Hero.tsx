@@ -31,7 +31,9 @@ export default function Hero() {
           </div>
 
           <div className="portrait">
-            <img src={profile.photo} alt={`Portrait of ${profile.name}`} width={320} height={380} />
+            <span className="portrait-inner">
+              <img src={profile.photo} alt={`Portrait of ${profile.name}`} width={340} height={340} />
+            </span>
           </div>
         </div>
 

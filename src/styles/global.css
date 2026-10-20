@@ -128,7 +128,7 @@ p { margin: 0; }
 .lede { margin-top: 24px; max-width: 700px; font-size: 1.15rem; color: var(--muted); }
 .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 56px; align-items: center; }
 .portrait {
-  position: relative; width: 300px; aspect-ratio: 300 / 360;
+  position: relative; width: 340px; aspect-ratio: 1;
   border-radius: 24px; padding: 8px; background: var(--surface);
   border: 1px solid var(--border); box-shadow: var(--shadow);
 }
@@ -136,7 +136,8 @@ p { margin: 0; }
   content: ""; position: absolute; inset: -14px 14px 14px -14px; z-index: -1;
   border-radius: 28px; background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
 }
-.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 18px; }
+.portrait-inner { display: block; width: 100%; height: 100%; overflow: hidden; border-radius: 18px; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .hero { position: relative; isolation: isolate; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .hero-actions.center { justify-content: center; }
@@ -278,9 +279,11 @@ p { margin: 0; }
   .two-col { grid-template-columns: 1fr; gap: 20px; }
   .edu-grid { grid-template-columns: 1fr; gap: 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 0; }
-  .portrait { order: -1; width: 160px; margin: 0 0 32px 14px; border-radius: 20px; padding: 6px; }
+  .portrait { order: -1; width: 180px; margin: 0 0 32px 14px; border-radius: 20px; padding: 6px; }
   .portrait::before { inset: -10px 10px 10px -10px; border-radius: 22px; }
-  .portrait img { border-radius: 15px; }
+  .portrait-inner { border-radius: 15px; }
+  /* Small frame: zoom in on the face */
+  .portrait img { transform: scale(1.6); transform-origin: 50% 22%; }
 }
 
 @media (max-width: 760px) {
