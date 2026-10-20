@@ -1,20 +1,23 @@
 import type { EarlierRole, Fact, Job, Link, Project, Qualification, Role, StackGroup } from './types.ts'
 import myslates from '../assets/projects/myslates.png'
 import paysadaqa from '../assets/projects/paysadaqa.png'
+import photo from '../assets/profile.jpg'
 
 export const profile = {
   name: 'Al-Ameen Yahya Harande',
   shortName: 'Al-Ameen Yahya',
   initials: 'AY',
   title: 'Senior Software Engineer',
-  location: 'Kano, Nigeria',
-  availability: 'Open to senior engineering roles',
+  availability: 'Remote · Open to senior engineering roles worldwide',
   summary:
     'I build and run production software end to end: web applications, large-scale data pipelines and the cloud infrastructure underneath them. For 8+ years I have worked across healthcare, logistics, education and enterprise services, owning systems from requirements and architecture through deployment and day-to-day support.',
-  email: 'alameenyh321@gmail.com',
+  email: 'alameenaminu321@gmail.com',
   github: 'https://github.com/AlameenYahya',
   linkedin: 'https://www.linkedin.com/in/alameen-yahya-a40365245',
   whatsapp: 'https://wa.me/2348165350095',
+  photo,
+  /** Served from public/ */
+  cv: '/Al-Ameen-Yahya-Harande-CV.pdf',
 }
 
 export const navLinks: Link[] = [
@@ -176,9 +179,9 @@ export const projects: Project[] = [
 ]
 
 export const stack: StackGroup[] = [
-  { title: 'Languages', items: 'JavaScript, TypeScript, Python, SQL, HTML, CSS' },
+  { title: 'Languages', items: 'JavaScript, TypeScript, Python, PHP, SQL, HTML, CSS' },
   { title: 'Frontend', items: 'React, Next.js, Vue.js / Nuxt, Tailwind CSS, WordPress, UI/UX in Figma' },
-  { title: 'Backend & Data', items: 'Node.js, Django & DRF, Laravel, PostgreSQL, Supabase, Firebase, REST APIs' },
+  { title: 'Backend & Data', items: 'Node.js, Django & DRF, PHP Laravel, REST APIs, PostgreSQL, MySQL, MongoDB, Supabase, Firebase' },
   {
     title: 'Data Engineering',
     items: 'Python pipelines for 700k+ row files: openpyxl (streaming), python-calamine, PyMuPDF, ReportLab, pypdf, LibreOffice batch conversion',

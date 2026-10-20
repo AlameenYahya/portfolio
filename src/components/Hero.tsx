@@ -5,28 +5,34 @@ export default function Hero() {
   return (
     <section className="hero" id="top">
       <div className="container">
-        <p className="eyebrow">
-          <span className="dot" aria-hidden="true" /> {profile.availability}
-        </p>
-        <h1>{profile.name}</h1>
-        <p className="role">
-          {profile.title} <span className="location">· {profile.location}</span>
-        </p>
-        <p className="lede">{profile.summary}</p>
+        <div className="hero-grid">
+          <div>
+            <p className="eyebrow">
+              <span className="dot" aria-hidden="true" /> {profile.availability}
+            </p>
+            <h1>{profile.name}</h1>
+            <p className="role">{profile.title}</p>
+            <p className="lede">{profile.summary}</p>
 
-        <div className="hero-actions">
-          <a className="btn btn-primary" href={`mailto:${profile.email}`}>
-            Get in touch
-          </a>
-          <a className="btn btn-ghost" href="#work">
-            View selected work
-          </a>
-          <ExternalLink className="btn btn-ghost" href={profile.linkedin}>
-            LinkedIn ↗
-          </ExternalLink>
-          <ExternalLink className="btn btn-ghost" href={profile.github}>
-            GitHub ↗
-          </ExternalLink>
+            <div className="hero-actions">
+              <a className="btn btn-primary" href={`mailto:${profile.email}`}>
+                Get in touch
+              </a>
+              <a className="btn btn-ghost" href={profile.cv} download>
+                Download CV
+              </a>
+              <ExternalLink className="btn btn-ghost" href={profile.linkedin}>
+                LinkedIn ↗
+              </ExternalLink>
+              <ExternalLink className="btn btn-ghost" href={profile.github}>
+                GitHub ↗
+              </ExternalLink>
+            </div>
+          </div>
+
+          <div className="portrait">
+            <img src={profile.photo} alt={`Portrait of ${profile.name}`} width={320} height={380} />
+          </div>
         </div>
 
         <ul className="now" aria-label="Current roles">

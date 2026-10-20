@@ -9,11 +9,14 @@ export default function Contact() {
         <SectionHeading
           kicker="Contact"
           title="Let's talk"
-          intro={`I'm open to Senior Software Engineer opportunities, based in ${profile.location}. The fastest way to reach me is by email.`}
+          intro="I work remotely with teams internationally and I'm open to Senior Software Engineer opportunities. The fastest way to reach me is by email."
         />
         <div className="hero-actions center">
           <a className="btn btn-primary" href={`mailto:${profile.email}`}>
             {profile.email}
+          </a>
+          <a className="btn btn-ghost" href={profile.cv} download>
+            Download CV
           </a>
           <ExternalLink className="btn btn-ghost" href={profile.linkedin}>
             LinkedIn ↗
